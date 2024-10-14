@@ -17,3 +17,14 @@ module "vpc" {
     }
   }
 }
+
+module "static_site" {
+  source = "../../modules/bucket"
+
+  name             = "tfmaestro-maintenance-page"
+  location         = "US"
+  force_destroy    = true
+  versioning       = true
+  main_page_suffix = "index.html"
+  not_found_page   = "404.html"
+}
