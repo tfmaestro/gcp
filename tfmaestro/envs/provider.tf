@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "google" {
-  project     = "<PROJECT_ID>"
-  region      = "europe-west1"
-  # credentials = file("/ścieżka/do/pliku-klucza.json")
+  project     = var.project
+  region      = var.region
 }
