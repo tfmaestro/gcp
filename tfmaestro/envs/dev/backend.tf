@@ -1,5 +1,5 @@
-terraform {
-    backend "gcs" {
-        bucket = "tfmaestro-terraform-state-dev"
-    }
-}
+# terraform {
+#     backend "gcs" {
+#         bucket = "<BUCKET_NAME>"
+#     }
+# }
