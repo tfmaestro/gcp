@@ -1,6 +1,7 @@
 module "vpc" {
   source       = "../../modules/vpc"
   name         = "prod"
+  project      = "<PROJECT_ID>"
   description  = "Production environment VPC"
   routing_mode = "GLOBAL"
 
@@ -28,3 +29,4 @@ module "static_site" {
   main_page_suffix = "index.html"
   not_found_page   = "404.html"
 }
+
