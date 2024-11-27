@@ -1,15 +1,18 @@
 variable "region" {
   type = string
 }
+
 variable "environment" {
   description = "Type of environment"
   type        = string
 }
+
 variable "project" {
   description = "The ID of the project to deploy resources in."
   type        = string
-  default     = "hip-limiter-423316-v6"
+  default     = "<PROJECT_ID>"
 }
+
 variable "subnetwork_ip_cidr_range" {
   description = "The CIDR range for the subnetwork."
   type        = string
