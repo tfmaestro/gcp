@@ -3,6 +3,11 @@ variable "name" {
   type        = string
 }
 
+variable "project" {
+  description = "The GCP project ID"
+  type        = string
+}
+
 variable "description" {
   description = "The description of the VPC"
   type        = string
