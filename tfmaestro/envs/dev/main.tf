@@ -1,6 +1,6 @@
 module "vpc" {
   source       = "../../modules/vpc"
-  name         = var.environment
+  name         = "dev"
   project      = var.project
   description  = "Development environment VPC"
   routing_mode = "GLOBAL"
@@ -17,4 +17,13 @@ module "vpc" {
       private_ip_google_access = true
     }
   }
+}
+
+module "terraform_state_bucket" {
+  source = "../../modules/terraform_state_bucket"
+
+  name_prefix     = "tfmaestro"
+  environment     = var.environment
+  location        = "US"
+  log_bucket_name = "terraform-state-logs-dev"
 }

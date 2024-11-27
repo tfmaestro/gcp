@@ -1,5 +1,5 @@
-terraform {
-    backend "gcs" {
-        bucket = "<BUCKET_NAME>"
-    }
-}
+# terraform {
+#     backend "gcs" {
+#         bucket = "<BUCKET_NAME>"
+#     }
+# }

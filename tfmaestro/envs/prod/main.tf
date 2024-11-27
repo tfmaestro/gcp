@@ -1,6 +1,6 @@
 module "vpc" {
   source       = "../../modules/vpc"
-  name         = var.environment
+  name         = "prod"
   project      = var.project
   description  = "Production environment VPC"
   routing_mode = "GLOBAL"
@@ -38,4 +38,3 @@ module "terraform_state_bucket" {
   location        = "US"
   log_bucket_name = "terraform-state-logs-prod"
 }
-

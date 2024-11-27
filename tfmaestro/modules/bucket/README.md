@@ -31,3 +31,4 @@ Wykonaj deploy
 ```
 terraform apply
 ```
+
