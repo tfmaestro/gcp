@@ -1,1 +1,0 @@
-region = "europe-central2"
