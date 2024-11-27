@@ -8,7 +8,7 @@ resource "google_compute_network" "vpc" {
 
 resource "google_compute_subnetwork" "subnet" {
   for_each                 = var.subnets
-  project                 = var.project
+  project                  = var.project
   name                     = each.key
   ip_cidr_range            = each.value["cidr"]
   region                   = each.value["region"]

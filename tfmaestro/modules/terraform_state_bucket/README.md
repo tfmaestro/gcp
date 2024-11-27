@@ -25,19 +25,57 @@ project     = "<PROJECT_ID>" <- Tutaj dodaj swój project ID
 
 Przejdź do folderu prod i zainicjuj Terraforma.
     
-    ```bash
+    ```
     terraform init
     ```
     
 Wykonaj deploy.
-    
-    ```bash
+
+    ```
     terraform apply
     ```
     
 Wylistuj dostępne buckety.
-    
-    ```java
+
+    ```
     gsutil ls
     ```
 
+
+## Migracja stanu lokalnego do bucketa
+
+Kolejny krok to migracja plików stanu z Twojego komputera do chmury.
+Aby to zrobić postępuj zgodnie z instrukcjami:
+
+Dodaj nazwę bucketa w pliku `envs/prod/backend.tf` oraz/lub `envs/dev/backend.tf`
+
+Aktualnie konfiguracja powinna wyglądać tak, czyli wartość dla bucket musi być podmieniona.
+```
+terraform {
+    backend "gcs" {
+        bucket = "<BUCKET_NAME>"
+    }
+}
+```
+Tak mniej więcej powinna wyglądać konfiguracja `backend.tf` z właściwą nazwą.
+
+```
+terraform {
+    backend "gcs" {
+        bucket = "tfmaestro-terraform-state-prod"
+    }
+}
+```
+
+Zmigruj stan do bucketa inicjalizując Terraforma jeszcze raz.
+Postępuj zgodnie z instrukcją w terminalu.
+
+```
+terraform init
+```
+
+Ponownie wykonaj deploy
+
+```
+terraform apply
+```

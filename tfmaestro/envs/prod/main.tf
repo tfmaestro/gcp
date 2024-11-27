@@ -38,3 +38,4 @@ module "terraform_state_bucket" {
   location        = "US"
   log_bucket_name = "terraform-state-logs-prod"
 }
+
