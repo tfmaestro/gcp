@@ -1,6 +1,7 @@
 module "vpc" {
   source       = "../../modules/vpc"
   name         = "dev"
+  project      = "<PROJECT_ID>"
   description  = "Development environment VPC"
   routing_mode = "GLOBAL"
 
