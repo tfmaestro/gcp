@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "google" {
-  project     = "<PROJECT_ID>"
+  project     = var.project
   region      = var.region
 }
