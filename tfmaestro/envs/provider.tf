@@ -8,6 +8,11 @@ terraform {
 }
 
 provider "google" {
+<<<<<<< HEAD
   project     = var.project
   region      = var.region
+=======
+  project     = "<PROJECT_ID>"
+  region      = "europe-west1"
+>>>>>>> static-update-v3
 }
