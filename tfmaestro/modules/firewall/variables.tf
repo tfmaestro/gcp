@@ -1,14 +1,10 @@
 variable "project" {
-  description = "The GCP project ID to use for resources"
+  description = "The ID of the project to deploy resources in."
   type        = string
 }
 
-variable "region" {
-  type = string
-}
-
-variable "environment" {
-  description = "Type of environment"
+variable "network_name" {
+  description = "The name of the VPC network to which the firewall rules will be applied."
   type        = string
 }
 
