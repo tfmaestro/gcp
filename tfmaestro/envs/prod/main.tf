@@ -19,6 +19,13 @@ module "vpc" {
   }
 }
 
+module "firewall" {
+  source       = "../../modules/firewall"
+  network_name = "${var.environment}-vpc"
+  project      = var.project
+  allow_firewall_rules = var.allow_firewall_rules
+}
+
 module "static_site" {
   source = "../../modules/bucket"
 
