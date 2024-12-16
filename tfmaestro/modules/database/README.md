@@ -5,8 +5,8 @@
 Ustaw w terminalu wartości dla `admin_password` i `mysql_user_password`
 
 ```
-export TF_VAR_mysql_admin_password="<hasło>"
-export TF_VAR_mysql_mysql_user_password="<hasło>"
+export TF_VAR_admin_password="<hasło>"
+export TF_VAR_mysql_user_password="<hasło>"
 ```
 
 ### Dodaj project ID
